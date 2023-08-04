@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+    @apply bg-dark text-light font-kanban box-border;
+    scroll-behavior: smooth;
+}
+::selection {
+    @apply bg-secondary;
+    @apply text-light;
+}
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-secondary;
+    border-radius: 4px;
+}
+
+.task::-webkit-scrollbar-thumb {
+    @apply bg-secondary;
+}
+
+.islam:hover {
+    filter: drop-shadow(0 0 2em rgba(243,79,41,0.85));
+
+}
+.islam {
+    animation: bounce 5s infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-10%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+.kanban {
+    min-height: calc(100dvh - 4rem);
+}
