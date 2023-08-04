@@ -168,8 +168,8 @@ function ColumnContainer({ column, onDelete, onUpdate, tasks, createTask, onDele
           <X />
         </button>
       </div>
-      <div className="flex flex-grow flex-col p-2 overflow-y-auto gap-2">
-        <div className="h-[100%] overflow-x-auto flex flex-col gap-2">
+      <div className="flex flex-col p-2 overflow-y-hidden gap-2">
+        <div className="h-[100%] overflow-y-auto flex flex-col gap-2">
           <SortableContext items={tasksId}>
             {tasks.map(task => (
               <TaskCard task={task} key={task.id} onDeleteTask={onDeleteTask} onTaskUpdate={onTaskUpdate} />

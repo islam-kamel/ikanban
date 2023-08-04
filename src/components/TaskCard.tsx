@@ -89,6 +89,7 @@ function TaskCard({ task, onDeleteTask, onTaskUpdate }: Props) {
         rounded
         w-[100%]
         h-[100px]
+        min-h-[100px]
         backdrop-blur
         "
       />
